@@ -11,7 +11,7 @@ function quest1_Complete() {
         return;
     }
 
-    let ans = prompt('Vége van. A boszorkány soha nem fogja megkeseríteni az életed. Innentől a béke a jelszó.');
+    let ans = prompt('Vége van. A boszorkány soha nem fog megbántani már. Innentől a béke a jelszó.');
 
     if (ans != 'béke') return;
 
