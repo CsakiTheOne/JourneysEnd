@@ -32,7 +32,10 @@ function doQuest(questName, question, answer, reward) {
     {
         alert('Nem sikerült teljesíteni a küldetést.');
     }
-    $('btn' + questName).innerText = 'KÉSZ';
-    localStorage.setItem('quest' + questName, 'KÉSZ');
-    window.location = reward;
+    else
+    {
+        $('btn' + questName).innerText = 'KÉSZ';
+        localStorage.setItem('quest' + questName, 'KÉSZ');
+        window.location = reward;
+    }
 }
