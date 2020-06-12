@@ -1,17 +1,18 @@
 // HELPER
 
 function $(id) { return document.getElementById(id); }
+var questList = ['Witch', 'Rainbow', 'Potion', 'Simple'];
 
 function reset() {
-    localStorage.removeItem('questWitch');
-    localStorage.removeItem('questRainbow');
-    localStorage.removeItem('questPotion');
+    for (const q in questList) {
+        localStorage.removeItem('quest' + questList[q]);
+    }
     window.location.reload();
 }
 
-if (localStorage.getItem('questWitch') == 'KÉSZ') $('btnWitch').innerText = 'KÉSZ';
-if (localStorage.getItem('questRainbow') == 'KÉSZ') $('btnRainbow').innerText = 'KÉSZ';
-if (localStorage.getItem('questPotion') == 'KÉSZ') $('btnPotion').innerText = 'KÉSZ';
+for (const q in questList) {
+    if (localStorage.getItem('quest' + questList[q]) == 'KÉSZ') $('btn' + questList[q]).innerText = 'KÉSZ';
+}
 
 // INDEX
 
@@ -19,6 +20,7 @@ $('btnReset').addEventListener('click', reset);
 $('btnWitch').addEventListener('click', questWitch_Complete);
 $('btnRainbow').addEventListener('click', questRainbow_Complete);
 $('btnPotion').addEventListener('click', questPotion_Complete);
+$('btnSimple').addEventListener('click', questSimple_Complete);
 
 function questWitch_Complete() {
     doQuest('Witch', 'Vége van. A boszorkány soha nem fog megbántani már. Innentől a béke a jelszó.', 'béke', 'https://youtu.be/-Z4jx5VMw8M');
@@ -40,6 +42,10 @@ function questPotion_Complete() {
         return;
     }
     doQuest('Potion', 'Mi volt a palack eredeti tartalma?', 'Potion of Regeneration');
+}
+
+function questSimple_Complete() {
+    doQuest('Simple', 'Mennyi 1 + 1?', '2', 'https://youtu.be/dQw4w9WgXcQ');
 }
 
 function doQuest(questName, question, answer, reward) {
