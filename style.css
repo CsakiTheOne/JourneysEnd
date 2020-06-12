@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body
+{
+    background: #ddd;
+}
+
+h1
+{
+    margin: 16px 0;
+    padding: 8px;
+    background: #ff6;
+    text-align: center;
+    box-shadow: 0 0 10px #ff6;
+}
+
+button
+{
+    padding: 4px;
+    background: #eee;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .2), -5px -5px 10px rgba(255, 255, 255, .5);
+    border: none;
+    border-radius: 4px;
+    outline: none;
+}
+
+.quest-card
+{
+    margin: 32px 16px;
+    padding: 8px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .2), -10px -10px 10px rgba(255, 255, 255, .5);
+    border-radius: 16px;
+}
+
+.quest-card > *
+{
+    margin: 8px;
+}
