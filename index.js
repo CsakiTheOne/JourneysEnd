@@ -7,7 +7,7 @@ $('btnReset').addEventListener('click', reset);
 function quest1_Complete() {
     if ($('btn1').innerText == 'KÉSZ')
     {
-        alert('Ez a küldetés már kész van!');
+        window.location = 'https://youtu.be/-Z4jx5VMw8M';
         return;
     }
 
@@ -18,12 +18,14 @@ function quest1_Complete() {
     $('btn1').innerText = 'KÉSZ';
 
     localStorage.setItem('quest1', 'KÉSZ');
+
+    window.location = 'https://youtu.be/-Z4jx5VMw8M';
 }
 
 function quest2_Complete() {
     if ($('btn1').innerText != 'KÉSZ')
     {
-        alert('Még meg kell csinálnod az előző küldetést!');
+        alert('Még meg kell csinálnod az "Utolsó főellenség" küldetést!');
         return;
     }
     if ($('btn2').innerText == 'KÉSZ')
