@@ -13,6 +13,7 @@ function reset() {
 for (const q in questList) {
     if (localStorage.getItem('quest' + questList[q]) == 'KÉSZ') $('btn' + questList[q]).innerText = 'KÉSZ';
 }
+if (localStorage.getItem('questPotion') != 'KÉSZ') $('btnPotion2').style.display = 'none';
 
 // INDEX
 
@@ -41,7 +42,7 @@ function questPotion_Complete() {
         alert('Még meg kell csinálnod az "Utolsó főellenség" küldetést!');
         return;
     }
-    doQuest('Potion', 'Mi volt a palack eredeti tartalma?', 'Potion of Regeneration');
+    doQuest('Potion', 'Mi volt a palack eredeti tartalma?', 'Potion of Regeneration', 'https://youtu.be/N4Fd3RPw3mw');
 }
 
 function questSimple_Complete() {
