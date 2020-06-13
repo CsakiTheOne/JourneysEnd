@@ -17,15 +17,20 @@ h1
 {
     margin: 16px 0;
     padding: 8px;
-    background: #ff6;
+    background: #ff2;
     color: #884;
     text-align: center;
-    box-shadow: 0 0 10px #ff6;
+    box-shadow: 0 0 10px #ff2;
 }
 
 button
 {
+    display: block;
     padding: 4px;
+    width: calc(100% - 16px);
+    background: #eee;
+    color: #aa4;
+    font-weight: bold;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .2), -5px -5px 10px rgba(255, 255, 255, .7);
     border: none;
     border-radius: 4px;
